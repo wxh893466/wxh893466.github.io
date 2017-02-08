@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wxh893466.github.io/"/>
-  <updated>2017-02-02T17:53:05.623Z</updated>
+  <updated>2017-02-08T02:40:50.916Z</updated>
   <id>https://wxh893466.github.io/</id>
   
   <author>
@@ -16,19 +16,244 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端博客</title>
-    <link href="https://wxh893466.github.io/2016/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://wxh893466.github.io/2016/04/02/第一篇博客/</id>
-    <published>2016-04-01T16:52:31.000Z</published>
-    <updated>2017-02-02T17:53:05.623Z</updated>
+    <title>使用Mongoose遇到的一些错误</title>
+    <link href="https://wxh893466.github.io/2016/11/14/%E4%BD%BF%E7%94%A8Mongoose%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%94%99%E8%AF%AF/"/>
+    <id>https://wxh893466.github.io/2016/11/14/使用Mongoose遇到的一些错误/</id>
+    <published>2016-11-14T12:01:45.000Z</published>
+    <updated>2017-02-08T02:40:50.916Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<p><a href="https://github.com/wxh893466/wxh893466.github.io" target="_blank" rel="external">wxh</a></p>
+    <content type="html"><![CDATA[<h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);</p>
+<h4 id="Trying-to-open-unclosed-connection"><a href="#Trying-to-open-unclosed-connection" class="headerlink" title="Trying to open unclosed connection."></a>Trying to open unclosed connection.</h4><p> 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次<br> <a id="more"></a><br>var mongoose = require(‘mongoose’);<br>//连接<br>mongoose.connect(‘mongodb://localhost/shuoshuo’);<br>解决方法:链接检测只写一次直接写在app.js 用的时候只有引var mongoose = require(‘mongoose’);不用再链接检测</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;h3 id=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;a href=&quot;#Mongoose使用时碰到的一些错误&quot; class=&quot;headerlink&quot; title=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;/a&gt;Mongoose使用时碰到的一些错误&lt;/h3&gt;&lt;h4 id=&quot;DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot;&gt;&lt;a href=&quot;#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot; class=&quot;headerlink&quot; title=&quot;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&quot;&gt;&lt;/a&gt;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&lt;/h4&gt;&lt;p&gt;解决方法,在连接前加一句话&lt;br&gt;mongoose.Promise = global.Promise;&lt;br&gt;mongoose.connect(‘mongodb://localhost/test’);&lt;/p&gt;
+&lt;h4 id=&quot;Trying-to-open-unclosed-connection&quot;&gt;&lt;a href=&quot;#Trying-to-open-unclosed-connection&quot; class=&quot;headerlink&quot; title=&quot;Trying to open unclosed connection.&quot;&gt;&lt;/a&gt;Trying to open unclosed connection.&lt;/h4&gt;&lt;p&gt; 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+      <category term="MongoDB" scheme="https://wxh893466.github.io/tags/MongoDB/"/>
+    
+      <category term="Mongoose" scheme="https://wxh893466.github.io/tags/Mongoose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeJs中Mongoose使用</title>
+    <link href="https://wxh893466.github.io/2016/11/10/Mongoose%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>https://wxh893466.github.io/2016/11/10/Mongoose使用总结/</id>
+    <published>2016-11-09T16:10:46.000Z</published>
+    <updated>2017-02-08T02:40:02.532Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mongoose"><a href="#Mongoose" class="headerlink" title="Mongoose"></a>Mongoose</h2><p>Mongoose能够让我们在NodeJs操作MongoDB数据库变得简单。它实际上是一种ORM(Object Relative Model),其哲学是屏蔽了数据库底层,让我们操作JS对象,这些对象就自动在数据库中持久。<br>官网：<a href="http://www.nodeclass.com/api/mongoose.html" target="_blank" rel="external">http://www.nodeclass.com/api/mongoose.html</a></p>
+<h2 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h2><p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install mongoose</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">//引包，不需要引用mongodb，mongoose里面帮我们调用mongodb</div><div class="line">var mongoose = require(<span class="string">'mongoose'</span>);</div><div class="line">//连接  databasename是数据库名字</div><div class="line">mongoose.connect(<span class="string">'mongodb://localhost/databasename'</span>);</div><div class="line">//如果定义了密码</div><div class="line">//mongoose.connect(<span class="string">'mongodb://localhost/databasename'</span>,&#123;<span class="string">'user'</span>:<span class="string">'db_username'</span>,<span class="string">'pass'</span>:<span class="string">'db_password'</span>&#125;);</div><div class="line"></div><div class="line">//定义Cat的schema。schema就是结构型数据库的字段。</div><div class="line">var catSchema = mongoose.Schema(&#123;</div><div class="line">    name: String,</div><div class="line">    age : Number</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//定义Cat的model。里面的Cat参数就是collection的名字，自动帮我们加s。Cats</div><div class="line">var Cat = mongoose.model(<span class="string">'Cat'</span>, catSchema);</div><div class="line"></div><div class="line">//实例化对象</div><div class="line">var xiaobai = new Cat(&#123;name : <span class="string">"hellokitty"</span> , age : 12&#125;);</div><div class="line">// 这个对象已经new出来了，和平时的构造函数一样，属性已经被添加了</div><div class="line">console.log(xiaobai.name);</div><div class="line"></div><div class="line">//在数据库中保存对象</div><div class="line">xiaobai.save(<span class="keyword">function</span>(err,xiaobai)&#123;</div><div class="line">	<span class="keyword">if</span>(err)&#123;</div><div class="line">		console.log(<span class="string">"数据存储失败"</span>);</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">	&#125;</div><div class="line">	console.log(<span class="string">"数据存储成功"</span>);</div><div class="line">&#125;);</div><div class="line">//保存的另一种写法</div><div class="line">Cat.create(&#123;name : <span class="string">"xiaobai"</span> , age : 16&#125;,<span class="keyword">function</span>(err,xiaobai)&#123;</div><div class="line">	<span class="keyword">if</span>(err)&#123;</div><div class="line">		console.log(<span class="string">"数据存储失败"</span>);</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">	&#125;</div><div class="line">	console.log(<span class="string">"数据存储成功"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>Mongoose操作MongoDB就是那么简单</p>
+<h4 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h4><p>Mongoose的一切都始于一个Schema。每个Schema映射到MongoDB的Collection,它是一种数据模式，是表结构的定义</p>
+<h4 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h4><p>var Cat = mongoose.model(‘Cat’, catSchema);<br>Model是使用schema来定义的模型,用于对数据库的操作，后面的增删改查都是用这个Model来操作了</p>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">//查找Model.find(&#123;条件,条件&#125;) &#123;&#125;表示查找所有</div><div class="line"> Cat.find(&#123;&#125;,<span class="keyword">function</span>(err,cats)&#123;</div><div class="line"> 	</div><div class="line"> &#125;);</div><div class="line"> //查找单条数据</div><div class="line"> Cat.findOne(&#123;<span class="string">"name"</span> : <span class="string">"hellokitty"</span>&#125;,<span class="keyword">function</span>(err,hellokitty)&#123;</div><div class="line">	&#125;);</div><div class="line">&#125;);</div><div class="line">//还支持lt gt gte lte等语法</div><div class="line">//检索年龄大于10岁的</div><div class="line">Cat.find(&#123;&#125;).where(<span class="string">"age"</span>).gt(10).exec(<span class="keyword">function</span>(err,kittens)&#123;</div><div class="line">	console.log(kittens);</div><div class="line">&#125;);</div><div class="line">//选择字段</div><div class="line">Cat.find(&#123;&#125;,<span class="string">'name age'</span>,<span class="keyword">function</span>(eer,result)&#123;</div><div class="line">    console.log(result);</div><div class="line">&#125;);</div><div class="line">//另一种方式</div><div class="line">var query=Cat.find(&#123;&#125;).where(<span class="string">"age"</span>).lt(19);</div><div class="line">//过滤查找出来的字段</div><div class="line">query.select(<span class="string">'name'</span>);</div><div class="line">query.exec(<span class="keyword">function</span>(err,cats)&#123;</div><div class="line">    console.log(cats);</div><div class="line">&#125;);</div><div class="line">//有排序</div><div class="line">Cat.find(&#123;&#125;)</div><div class="line">    .where(<span class="string">'age'</span>).gt(12).lt(80)</div><div class="line">    .sort(&#123;<span class="string">'age'</span>:-1&#125;)</div><div class="line">    .limit(4)</div><div class="line">    .select(<span class="string">'name age'</span>)</div><div class="line">    .exec(<span class="keyword">function</span>(err,cats)&#123;</div><div class="line">        console.log(cats);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>更新数据<br>有三种方式来更新数据：<br>update(conditions,update,options,callback);<br>该方法会匹配到所查找的内容进行更新，不会返回数据；<br>findOneAndUpdate(conditions,update,options,callback);<br>该方法会根据查找去更新数据库，另外也会返回查找到的并未改变的数据；<br>findByIdAndUpdate(conditions,update,options,callback);<br>该方法跟上面的findOneAndUpdate方法功能一样，不过他是根据ID来查找文档并更新的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//查找更新  参数依次是 条件 更新的内容 查询字段 回调</div><div class="line">Cat.findOneAndUpdate(&#123;<span class="string">'name'</span>:<span class="string">"小y"</span>&#125;,&#123;<span class="string">"age"</span>:82&#125;,<span class="string">'name age'</span>,<span class="keyword">function</span>(err,result)&#123;</div><div class="line">    console.log(result);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>数据删除<br>跟更新数据一样：<br>remove();<br>findOneAndRemove();<br>findByIdAndRemove();</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Mongoose&quot;&gt;&lt;a href=&quot;#Mongoose&quot; class=&quot;headerlink&quot; title=&quot;Mongoose&quot;&gt;&lt;/a&gt;Mongoose&lt;/h2&gt;&lt;p&gt;Mongoose能够让我们在NodeJs操作MongoDB数据库变得简单。它实际上是一种ORM(Object Relative Model),其哲学是屏蔽了数据库底层,让我们操作JS对象,这些对象就自动在数据库中持久。&lt;br&gt;官网：&lt;a href=&quot;http://www.nodeclass.com/api/mongoose.html&quot;&gt;http://www.nodeclass.com/api/mongoose.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装及使用&quot;&gt;&lt;a href=&quot;#安装及使用&quot; class=&quot;headerlink&quot; title=&quot;安装及使用&quot;&gt;&lt;/a&gt;安装及使用&lt;/h2&gt;&lt;p&gt;安装&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install mongoose&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+      <category term="MongoDB" scheme="https://wxh893466.github.io/tags/MongoDB/"/>
+    
+      <category term="Mongoose" scheme="https://wxh893466.github.io/tags/Mongoose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最流行的自动化工具Gulp</title>
+    <link href="https://wxh893466.github.io/2016/08/26/%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7Gulp/"/>
+    <id>https://wxh893466.github.io/2016/08/26/最流行的自动化工具Gulp/</id>
+    <published>2016-08-26T06:56:16.000Z</published>
+    <updated>2017-02-08T02:43:34.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h1><h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
+<li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
+<li>我们要提高效率，就必须减少重复的工作</li>
+<li>使用less之类预处理的CSS coffeescript</li>
+<li>提供开发阶段的便利，开发阶段更快捷</li>
+<li>现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上</li>
+<li>Gulp就是一种可以自动化完成我们开发过程中大量的重复工作<ul>
+<li>预处理语言的编译</li>
+<li>js css html 压缩混淆</li>
+<li>图片体积优化</li>
+</ul>
+</li>
+<li>除gulp之外还有一些类似的自动化工具，比如grunt</li>
+<li><p>what how why</p>
+<a id="more"></a>
+<h2 id="Gulp简介"><a href="#Gulp简介" class="headerlink" title="Gulp简介"></a>Gulp简介</h2></li>
+<li><p>当下最流行的自动化工具</p>
+<ul>
+<li>什么是自动化构建工具？</li>
+<li>自动完成一系列重复的操作<ul>
+<li>less → css</li>
+<li>coffeescript → js</li>
+<li>css压缩</li>
+<li>css私有前缀</li>
+<li>js混淆</li>
+<li>html压缩</li>
+<li>img尺寸优化</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链接：<ul>
+<li><a href="http://gulpjs.com/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文网</a></li>
+</ul>
+</li>
+<li>gulp的包既包含工具，也包含一些编程的API</li>
+<li>就是用来机械化的完成重复性质的工作</li>
+<li>gulp的机制就是将重复工作抽象成一个个的任务</li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>安装Node.js<ul>
+<li>Node.js 给前端带来了一场工业革命</li>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
+<li>安装完成过后可以通过命令行工具node -v</li>
+<li>安装nodejs过程会自动安装npm(node packages manager)</li>
+<li>npm 3 以前的版本文件依赖是层级依赖</li>
+<li>npm 3 以后依赖关系改为平行依赖（windows上路径过长问题）</li>
+<li>gulp本身是node的模块</li>
+</ul>
+</li>
+<li>安装 gulp 命令行工具<ul>
+<li><code>npm install -g gulp</code></li>
+<li>-g 指的是在全局作用域中安装</li>
+<li>测试命令 gulp -v</li>
+</ul>
+</li>
+<li>初始化 gulp 项目<ul>
+<li>在本地安装gulp包</li>
+<li>npm install gulp –save</li>
+<li>npm install –save-dev gulp 只是开发环境</li>
+</ul>
+</li>
+<li><p>创建任务 在项目文件夹下新建- gulpfile.js</p>
+<ul>
+<li>gulpfile.js 就是gulp的主文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="string">'use strict'</span>;</div><div class="line"></div><div class="line">//此处代码都是由NODE执行</div><div class="line">//载入gulp模块</div><div class="line">var gulp=require(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line">//注册一个任务</div><div class="line">gulp.task(<span class="string">'hello'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	//当gulp执行这个hello任务时会执行该函数</div><div class="line">	//console.log(<span class="string">'hello'</span>);</div><div class="line">	//合并压缩之类的操作</div><div class="line"></div><div class="line">	//复制文件</div><div class="line">	// gulp.src取一个文件</div><div class="line">	//dest目的地</div><div class="line">	gulp.src(<span class="string">'src/index.html'</span>)</div><div class="line">	.pipe(gulp.dest(<span class="string">'dist/'</span>));//将此处需要的操作传递进去</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>执行 gulp hello  –gulp 任务名<br>这时index.html文件就被复制到dist目录下了</p>
+</li>
+</ul>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><p>插件的使用和node插件一样</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/gulp-less" target="_blank" rel="external">编译 Less：gulp-less</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-jade" target="_blank" rel="external">编译 Jade: gulp-jade</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-connect" target="_blank" rel="external">创建本地服务器：gulp-connect</a></li>
+<li><a href="http://www.browsersync.cn/" target="_blank" rel="external">创建本地服务器(比gulp-connect更强大)：browsersync</a> </li>
+<li><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="external">合并文件：gulp-concat</a></li>
+<li><a href="https://browsersync.io" target="_blank" rel="external">最小化 js 文件：gulp-uglify</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="external">重命名文件：gulp-rename</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-css" target="_blank" rel="external">最小化 css 文件：gulp-minify-css</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-html" target="_blank" rel="external">压缩html文件 gulp-minify-html</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-imagemin" target="_blank" rel="external">最小化图像：gulp-imagemin</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Gulp&quot;&gt;&lt;a href=&quot;#Gulp&quot; class=&quot;headerlink&quot; title=&quot;Gulp&quot;&gt;&lt;/a&gt;Gulp&lt;/h1&gt;&lt;h2 id=&quot;当下的前端开发&quot;&gt;&lt;a href=&quot;#当下的前端开发&quot; class=&quot;headerlink&quot; title=&quot;当下的前端开发&quot;&gt;&lt;/a&gt;当下的前端开发&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了&lt;/li&gt;
+&lt;li&gt;我们要提高效率，就必须减少重复的工作&lt;/li&gt;
+&lt;li&gt;使用less之类预处理的CSS coffeescript&lt;/li&gt;
+&lt;li&gt;提供开发阶段的便利，开发阶段更快捷&lt;/li&gt;
+&lt;li&gt;现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上&lt;/li&gt;
+&lt;li&gt;Gulp就是一种可以自动化完成我们开发过程中大量的重复工作&lt;ul&gt;
+&lt;li&gt;预处理语言的编译&lt;/li&gt;
+&lt;li&gt;js css html 压缩混淆&lt;/li&gt;
+&lt;li&gt;图片体积优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;除gulp之外还有一些类似的自动化工具，比如grunt&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;what how why&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="gulp" scheme="https://wxh893466.github.io/tags/gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速开发框架Express</title>
+    <link href="https://wxh893466.github.io/2016/08/25/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6Expr/"/>
+    <id>https://wxh893466.github.io/2016/08/25/快速开发框架Expr/</id>
+    <published>2016-08-25T13:31:49.000Z</published>
+    <updated>2017-02-08T02:34:45.514Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Express-基于Node-js平台，快速、开放、极简的-web-开发框架"><a href="#Express-基于Node-js平台，快速、开放、极简的-web-开发框架" class="headerlink" title="Express 基于Node.js平台，快速、开放、极简的 web 开发框架"></a>Express 基于Node.js平台，快速、开放、极简的 web 开发框架</h2><p><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express</a> 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。</p>
+<p>和jQuery一样，Express是一个行业标准，大家都要用这个东西。<br>哲学和jQuery也一样，write less do more<br>废话不多说开始</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="1-路由"><a href="#1-路由" class="headerlink" title="1.路由"></a>1.路由</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//引用express,不需要http</div><div class="line">var express=require(<span class="string">"express"</span>);</div><div class="line">//创建一个app，固定写法</div><div class="line">var app=express();</div><div class="line">//路由</div><div class="line">app.get(<span class="string">"/"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">  res.end(<span class="string">"你好我是express"</span>)</div><div class="line">&#125;);</div><div class="line">//post提交</div><div class="line">app.post(<span class="string">'/post'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	</div><div class="line">&#125;);</div><div class="line">app.get(<span class="string">"/news:id"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    //匹配/news123</div><div class="line">    res.end(<span class="string">"新闻"</span>+req.params.id);</div><div class="line">&#125;);</div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure>
+<p>现在你输入<a href="http://127.0.0.1:3000/" target="_blank" rel="external">http://127.0.0.1:3000/</a> 就可以访问<br>express的路由极其智能<br>比如路由是这样：<br>app.get(“/haha”,function(req,res){<br>    res.send(“这是ihaha”)<br>});<br>URL如果是下面的地址，都能够让上面的路由匹配：<br><a href="http://localhost:3000/haha" target="_blank" rel="external">http://localhost:3000/haha</a><br><a href="http://localhost:3000/haha/" target="_blank" rel="external">http://localhost:3000/haha/</a><br><a href="http://localhost:3000/haha/?sdfadf" target="_blank" rel="external">http://localhost:3000/haha/?sdfadf</a><br><a href="http://localhost:3000/haha?sdfadf" target="_blank" rel="external">http://localhost:3000/haha?sdfadf</a></p>
+<h4 id="2-中间件"><a href="#2-中间件" class="headerlink" title="2.中间件"></a>2.中间件</h4><p>中间件叫做middleware，是express的创举，帮我们少了一层回调。<br>所有的中间件，都将作为http.createServer()的回调。是对用户请求的过滤。<br>中间件,只能匹配一次,如果匹配上了就不会往下执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">//引用express</div><div class="line">var express = require(<span class="string">"express"</span>);</div><div class="line"></div><div class="line">//创建一个app，固定写法</div><div class="line">var app = express();</div><div class="line">//这种语句则只是开机的时候会执行</div><div class="line">var a = 100;</div><div class="line">//这个中间件不会进行任何的匹配</div><div class="line">//谁进来都会执行</div><div class="line">app.use(<span class="keyword">function</span> (req, res, next) &#123;</div><div class="line">    //设置状态吗头部</div><div class="line">    res.status(200);</div><div class="line">    res.set(<span class="string">"Content-Type"</span>, <span class="string">"text/html;charset=UTF-8"</span>);</div><div class="line">    //这里必须写不然就不会往下匹配了</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line">app.get(<span class="string">"/"</span>, <span class="keyword">function</span> (req, res) &#123;</div><div class="line">    //中间件：就好像写在头和尾的东西，每个用户访问都会执行</div><div class="line">    // middleware是express的创举，帮我们少了一层回调</div><div class="line">    // 所有的中间件，都将作为http.createServer()的回调</div><div class="line">    //中间件 只能匹配一次</div><div class="line">    a++;</div><div class="line">    res.send(a + <span class="string">""</span>);</div><div class="line">    //解决跳楼现象:继续执行下一个中间件</div><div class="line">    //next();</div><div class="line">&#125;);</div><div class="line">//中间件 只能匹配一次 这里是不会被匹配的</div><div class="line">//有跳楼现象</div><div class="line">app.get(<span class="string">"/"</span>, <span class="keyword">function</span> (req, res) &#123;</div><div class="line">    res.send(<span class="string">"B"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//放最后用于没有匹配的默认页面</div><div class="line">//如果执行到这里说明上面的没有匹配成功</div><div class="line">//use放头和尾部:开头设置一些信息，结尾放默认页面</div><div class="line">app.use(<span class="keyword">function</span> (req, res, next) &#123;</div><div class="line">    //设置状态吗头部</div><div class="line">    res.status(404);</div><div class="line">    res.send(<span class="string">"没有这个页面"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure></p>
+<h4 id="2-静态文件"><a href="#2-静态文件" class="headerlink" title="2.静态文件"></a>2.静态文件</h4><p>我们想把http、css、js、图片都静态化，不希望每次对一个图片的请求，还要写路由。<br>express中使用了一个内置的中间件来解决这个事情<br>比如说我们的aa.txt文件放在statics文件夹中,现在我们要直接访问，就要把它静态化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//静态资源将文件静态化直接和阿帕奇一样了</div><div class="line">//http://127.0.0.1:3000/aa.txt</div><div class="line">app.use(express.static(<span class="string">"./statics"</span>));</div><div class="line"></div><div class="line">//加一个路由，http://127.0.0.1:3000/page/aa.txt</div><div class="line">//app.use(<span class="string">"/page"</span>,express.static(<span class="string">"./statics"</span>));</div></pre></td></tr></table></figure></p>
+<h4 id="3-模板引擎ejs的使用"><a href="#3-模板引擎ejs的使用" class="headerlink" title="3.模板引擎ejs的使用"></a>3.模板引擎ejs的使用</h4><p>模板引擎在Web开发中为了使用户界面与业务数据（内容）分离而产生的，它可以生成特定格式的文档，用于网站的模板引擎就会生成一个标准的HTML文档<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var express=require(<span class="string">"express"</span>);</div><div class="line">var app=express();</div><div class="line">//设置模板引擎 设置ejs</div><div class="line">//更换views目录为shitu</div><div class="line">app.set(<span class="string">"views"</span>,<span class="string">"./shitu"</span>);</div><div class="line">app.set(<span class="string">"view engine"</span>,<span class="string">"ejs"</span>);</div><div class="line"></div><div class="line">//app.use(express.static());</div><div class="line">app.get(<span class="string">"/"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">  //render表示使用摸个视图进行渲染</div><div class="line">  //使用的是views中的shouye.ejs</div><div class="line">  //res.render(<span class="string">"shouye"</span>);</div><div class="line">  res.render(<span class="string">"index.ejs"</span>,&#123;</div><div class="line">      <span class="string">"xuesheng"</span>:[<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"小狗"</span>]</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure></p>
+<p>我们在index.ejs我们可以接收传参&lt;%=xuesheng[i]%&gt;,就可以将参数显示出来,<br>当访问127.0.0.1:3000时渲染的就是index.ejs这个网页,ejs这个文件直接用html文件改后缀得来的</p>
+<p>Express有很多中间件的支持,对于快速开发是非常方便的</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Express-基于Node-js平台，快速、开放、极简的-web-开发框架&quot;&gt;&lt;a href=&quot;#Express-基于Node-js平台，快速、开放、极简的-web-开发框架&quot; class=&quot;headerlink&quot; title=&quot;Express 基于Node.js平台，快速、开放、极简的 web 开发框架&quot;&gt;&lt;/a&gt;Express 基于Node.js平台，快速、开放、极简的 web 开发框架&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.expressjs.com.cn/&quot;&gt;Express&lt;/a&gt; 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。&lt;/p&gt;
+&lt;p&gt;和jQuery一样，Express是一个行业标准，大家都要用这个东西。&lt;br&gt;哲学和jQuery也一样，write less do more&lt;br&gt;废话不多说开始&lt;/p&gt;
+&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install express --save&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+      <category term="expressjs" scheme="https://wxh893466.github.io/tags/expressjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeJs模块及npm知识</title>
+    <link href="https://wxh893466.github.io/2016/08/18/NodeJs%E6%A8%A1%E5%9D%97%E5%8F%8Anpm%E7%9F%A5%E8%AF%86/"/>
+    <id>https://wxh893466.github.io/2016/08/18/NodeJs模块及npm知识/</id>
+    <published>2016-08-18T12:14:24.000Z</published>
+    <updated>2017-02-04T14:35:30.774Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/img/dashang.jpg" alt=""></p>
+<h2 id="1-npm"><a href="#1-npm" class="headerlink" title="1.npm"></a>1.npm</h2><p>npm是node的包管理工具,用于下载别人编写的第三方node包,并安装到本地给程序使用,也可以将自己的程序提供到npm服务器上给别人使用</p>
+<p>每个Node程序都会有很多依赖的模块我们可以通过命令进行下载安装你需要的模块<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install ModuleName</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>当命令执行完后会在你的项目中多一个node_modules文件夹,安装的模块就放在这里面</p>
+<p>第二种方式是配置package.json文件,然后执行npm install 所有依赖的模块就会下载下来<br>比如我们需要underscore 和date-format，就在package.json文件中配置，然后执行npm install就可以了<br>“dependencies”: {<br>    “underscore”: “^1.8.3”,<br>    “date-format”: “^1.0.0”<br>  }</p>
+<p>package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）<a href="http://javascript.ruanyifeng.com/nodejs/packagejson.html" target="_blank" rel="external">具体请看这篇文章</a><br>如何生成package.json文件呢 在项目目录下执行npm init就行<br>安装模块的时候如果我们不想自己配置package.json<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$npm</span> install --save ModuleName  --安装的时候会自己配置到package.json中</div></pre></td></tr></table></figure></p>
+<h2 id="2-模块的引用"><a href="#2-模块的引用" class="headerlink" title="2.模块的引用"></a>2.模块的引用</h2><p>内置对象的引用require(‘ModuleName’)<br>自定义模块的引用require(“路径加文件名”);</p>
+<h2 id="3-项目中常用的模块"><a href="#3-项目中常用的模块" class="headerlink" title="3.项目中常用的模块"></a>3.项目中常用的模块</h2><p>formidable –表单提交文件上传<br>express    –项目中必不可少的快速开发框架<br>ejs        –后台快速模板引擎,配合express使用</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/dashang.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-npm&quot;&gt;&lt;a href=&quot;#1-npm&quot; class=&quot;headerlink&quot; title=&quot;1.npm&quot;&gt;&lt;/a&gt;1.npm&lt;/h2&gt;&lt;p&gt;npm是node的包管理工具,用于下载别人编写的第三方node包,并安装到本地给程序使用,也可以将自己的程序提供到npm服务器上给别人使用&lt;/p&gt;
+&lt;p&gt;每个Node程序都会有很多依赖的模块我们可以通过命令进行下载安装你需要的模块&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install ModuleName&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -38,33 +263,86 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://wxh893466.github.io/2016/02/02/hello-world/"/>
-    <id>https://wxh893466.github.io/2016/02/02/hello-world/</id>
-    <published>2016-02-01T16:52:31.000Z</published>
-    <updated>2017-02-02T17:28:49.256Z</updated>
+    <title>NodeJs的特点</title>
+    <link href="https://wxh893466.github.io/2016/08/05/NodeJs%E7%9A%84%E7%89%B9%E7%82%B9/"/>
+    <id>https://wxh893466.github.io/2016/08/05/NodeJs的特点/</id>
+    <published>2016-08-05T12:11:42.000Z</published>
+    <updated>2017-02-08T02:43:08.265Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<h3 id="NodeJs的特点"><a href="#NodeJs的特点" class="headerlink" title="NodeJs的特点"></a>NodeJs的特点</h3><blockquote>
+<ul>
+<li>单线程</li>
+<li>非阻塞I/O</li>
+<li>事件驱动</li>
+</ul>
+</blockquote>
+<h3 id="1-单线程"><a href="#1-单线程" class="headerlink" title="1.单线程"></a>1.单线程</h3><p>Node.js是单线程的。什么是线程，线程就是一个程序运行的所有环境的总和，比如内存、必要的CPU等等。<br><a id="more"></a><br>在Java、PHP或者.net等服务器端语言中，会为每一个客户端连接创建一个新的线程。而每个线程需要耗费大约2MB内存。也就是说，理论上一个8GB内存的服务器可以同时连接的最大用户数为4000个左右。要让Web应用程序支持更多的用户，就需要增加服务器的数量，而Web应用程序的硬件成本当然就上升了。<br>Node.js不为每个客户连接创建一个新的线程，而仅仅使用一个线程。当有用户连接了，就触发一个内部事件，通过非阻塞I/O、事件驱动机制，让Node.js程序宏观上也是并行的。使用Node.js，一个8GB内存的服务器，可以同时处理超过4万用户的连接。<br>另外，带线程的带来的好处，还有操作系统完全不再有线程创建、销毁的时间开销。<br>但是单线程有一个特别大的、致命的弱点，就是但凡有一个用户把你的服务器弄崩溃了，所有用户都无法访问了。也就是说，你的一个进程，撑起了所有人的访问。所以代码必须强劲，必须持久运行。</p>
+<h3 id="2-非阻塞I-O"><a href="#2-非阻塞I-O" class="headerlink" title="2.非阻塞I/O"></a>2.非阻塞I/O</h3><p>Node.js是单线程的，就等于说一个餐厅只有一个服务员。<br>当一个顾客遇见了一个需要等待长久的事情，比如考虑点啥菜，这个服务员不会傻等，直接去给别的顾客服务。当那个顾客，想好之后就按铃，服务员就过来给他点菜。</p>
+<p>例如，当在访问数据库取得数据的时候，需要一段时间。在传统的单线程处理机制中，在执行了访问数据库代码之后，整个线程都将暂停下来，等待数据库返回结果，才能执行后面的代码。也就是说，I/O阻塞了代码的执行，极大地降低了程序的执行效率。<br>由于Node.js中采用了非阻塞型I/O机制，因此在执行了访问数据库的代码之后，将立即转而执行其后面的代码，把数据库返回结果的处理代码放在回调函数中，从而提高了程序的执行效率。<br>当某个I/O执行完毕时，将以事件的形式通知执行I/O操作的线程，线程执行这个事件的回调函数。为了处理异步I/O，线程必须有事件循环，不断的检查有没有未处理的事件，依次予以处理。<br>阻塞模式下，一个线程只能处理一项任务，要想提高吞吐量必须通过多线程。而非阻塞模式下，一个线程永远在执行计算操作，这个线程的CPU核心利用率永远是100%。所以，这是一种特别有哲理的解决方案：与其人多，但是好多人闲着；还不如一个人玩命，往死里干活儿。</p>
+<p>Node.js擅长做I/O多的业务，如果你的业务计算多，那么Node.js不但不适合，而且是它的软肋！！</p>
+<h3 id="3-事件驱动"><a href="#3-事件驱动" class="headerlink" title="3.事件驱动"></a>3.事件驱动</h3><p>在Node中，客户端请求建立连接，提交数据等行为，会触发相应的事件。在Node中，在某一个时刻，只能执行一个事件回调函数，但是在执行一个事件回调函数的中途，可以转而处理其他事件（比如，又有新用户连接了），然后返回继续执行原事件的回调函数，这种处理机制，称为“事件环”机制。<br>Node.js底层是C++（V8也是C++写的）。底层代码中，近半数都用于事件队列、回调函数队列的构建。用事件驱动来完成服务器的任务调度</p>
+<h3 id="4-NOdeJs的运用场景"><a href="#4-NOdeJs的运用场景" class="headerlink" title="4.NOdeJs的运用场景"></a>4.NOdeJs的运用场景</h3><p>当应用程序需要处理大量并发的I/O，并且程序不需要进行非常复杂的计算的时候，Node.js非常适合。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h3 id=&quot;NodeJs的特点&quot;&gt;&lt;a href=&quot;#NodeJs的特点&quot; class=&quot;headerlink&quot; title=&quot;NodeJs的特点&quot;&gt;&lt;/a&gt;NodeJs的特点&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;单线程&lt;/li&gt;
+&lt;li&gt;非阻塞I/O&lt;/li&gt;
+&lt;li&gt;事件驱动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;1-单线程&quot;&gt;&lt;a href=&quot;#1-单线程&quot; class=&quot;headerlink&quot; title=&quot;1.单线程&quot;&gt;&lt;/a&gt;1.单线程&lt;/h3&gt;&lt;p&gt;Node.js是单线程的。什么是线程，线程就是一个程序运行的所有环境的总和，比如内存、必要的CPU等等。&lt;br&gt;
     
     </summary>
     
     
-      <category term="生活" scheme="https://wxh893466.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git的使用及常用命令</title>
+    <link href="https://wxh893466.github.io/2015/08/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://wxh893466.github.io/2015/08/03/Git的使用及常用命令/</id>
+    <published>2015-08-03T14:26:02.000Z</published>
+    <updated>2017-02-06T14:40:25.340Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/img/git.png" alt=""></p>
+<h2 id="一-什么是Git"><a href="#一-什么是Git" class="headerlink" title="一.什么是Git"></a>一.什么是Git</h2><p>  Git是目前世界上最先进的分布式版本控制系统。Git没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<h2 id="二-版本控制为什么选择Git"><a href="#二-版本控制为什么选择Git" class="headerlink" title="二.版本控制为什么选择Git"></a>二.版本控制为什么选择Git</h2><p>1.适合分布式开发，强调个体<br><a id="more"></a><br>2.公共服务器压力和数据量都不会太大<br>3.速度快、灵活<br>4.任意两个开发者之间可以很容易的解决冲突<br>5.离线工作</p>
+<h2 id="三-Git的常用命令及操作"><a href="#三-Git的常用命令及操作" class="headerlink" title="三.Git的常用命令及操作"></a>三.Git的常用命令及操作</h2><h2 id="1-Git的配置基本信息"><a href="#1-Git的配置基本信息" class="headerlink" title="1.Git的配置基本信息"></a>1.Git的配置基本信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">"你的用户名"</span>      -- 配置用户名，上传本地 repository 到服务器上时上传者的信息</div><div class="line"><span class="variable">$git</span> config --global user.email <span class="string">"你的邮箱"</span>     -- 配置邮箱</div><div class="line"><span class="variable">$git</span> config --list        查看配置信息列表</div></pre></td></tr></table></figure>
+<p>接下来要配置sshkey了，sshkey是用来确认上传者是否有上传的权限</p>
+<h4 id="创建本地ssh"><a href="#创建本地ssh" class="headerlink" title="创建本地ssh"></a>创建本地ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure>
+<p>这时在C:\Users\Administrator.ssh的文件夹我们会看到一个.shh的文件夹<br>私钥：id_rsa<br>公钥：id_rsa.pub</p>
+<h4 id="将id-rsa-pub文件用记事本打开复制里面的内容将其添加的github或者gitlab看你们公司用啥，以github为例"><a href="#将id-rsa-pub文件用记事本打开复制里面的内容将其添加的github或者gitlab看你们公司用啥，以github为例" class="headerlink" title="将id_rsa.pub文件用记事本打开复制里面的内容将其添加的github或者gitlab看你们公司用啥，以github为例"></a>将id_rsa.pub文件用记事本打开复制里面的内容将其添加的github或者gitlab看你们公司用啥，以github为例</h4><p>Account–Setting  –&gt;SSH and GPG Keys– SSH KEY –&gt; New SSH KEY –&gt; 粘贴id_rsa.pub中的内容</p>
+<h4 id="验证：-ssh-T-git-github-com"><a href="#验证：-ssh-T-git-github-com" class="headerlink" title="验证： ssh -T git@github.com"></a>验证： ssh -T git@github.com</h4><p>如果出现Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.说明已经配置成功</p>
+<h2 id="2-创建仓库"><a href="#2-创建仓库" class="headerlink" title="2.创建仓库"></a>2.创建仓库</h2><p>新建一个文件，进入文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init     --创建本地仓库</div></pre></td></tr></table></figure></p>
+<p>这时候目录下会多了一个.git的目录，这个目录是Git来跟踪管理版本的，这个目录里面的文件千万不能乱改，否则，会把git仓库给破坏了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com:用户名/仓库名.git       --把本地仓库和远程仓库关联起来，</div><div class="line"><span class="variable">$git</span> push -u origin master  --把版本库同步到远端</div><div class="line">-u以流的方式上传</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git pull origin master      --拉取远程仓库的更新，</div><div class="line">$ git remote -v  查看远程主机网址</div></pre></td></tr></table></figure>
+<h2 id="3-提交本地修改到远程仓库"><a href="#3-提交本地修改到远程仓库" class="headerlink" title="3.提交本地修改到远程仓库"></a>3.提交本地修改到远程仓库</h2><p>新建一个文件aa.txt，查看仓库状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git status</div></pre></td></tr></table></figure></p>
+<p>单出现红色字体时说明这些文件还没有提交<br>new file:   aa.txt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add . --添加所有文件到本地仓库</div></pre></td></tr></table></figure></p>
+<p>这是git status查看文字就变成了绿色<br>git add 命令有这些<br>git add .      – 添加所有改动到本地仓库中<br>git add -A      – 将改动添加到本地仓库中<br>git rm xxx      – 从本地仓库中删除指定文件<br>git rm -r xxx   –从本地仓库中删除指定文件夹</p>
+<p>提交文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> commit -m <span class="string">"注释"</span>    -- 把本机缓存中的内容提交到本机的 HEAD 里面</div><div class="line"></div><div class="line"><span class="variable">$git</span> push origin master      -- 把本地的更改推送到远程仓库中master分支</div></pre></td></tr></table></figure></p>
+<h2 id="4-分支的操作"><a href="#4-分支的操作" class="headerlink" title="4.分支的操作"></a>4.分支的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> branch      -- 查看本地分支</div><div class="line"><span class="variable">$git</span> branch <span class="_">-a</span>   -- 查看远程分支</div><div class="line"><span class="variable">$git</span> branch dev  --创建分支dev</div><div class="line"><span class="variable">$git</span> checkout dev --切换到dev分支</div><div class="line"><span class="variable">$git</span> push origin dev --把分支推到远程分支</div><div class="line"><span class="variable">$git</span> branch <span class="_">-d</span> dev   --删除本地分支</div><div class="line"><span class="variable">$git</span> push origin --delete dev  --删除远程分支dev</div></pre></td></tr></table></figure>
+<p>有时修改了文件我们想撤销恢复为更改前的状态<br>git checkout 文件名  </p>
+<h2 id="5-一些常用的命令"><a href="#5-一些常用的命令" class="headerlink" title="5.一些常用的命令"></a>5.一些常用的命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> <span class="built_in">log</span>  --查看日志</div><div class="line"><span class="variable">$git</span> diff --查看更改修改前后的差异</div><div class="line"><span class="variable">$git</span> reset logid --恢复提交过得一个版本</div></pre></td></tr></table></figure>
+<h2 id="6-冲突的解决"><a href="#6-冲突的解决" class="headerlink" title="6.冲突的解决"></a>6.冲突的解决</h2><p>如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> stash</div><div class="line"><span class="variable">$git</span> pull origin dev</div><div class="line"><span class="variable">$git</span> stash pop</div></pre></td></tr></table></figure></p>
+<h2 id="7-忽略文件添加"><a href="#7-忽略文件添加" class="headerlink" title="7.忽略文件添加"></a>7.忽略文件添加</h2><p>在根目录添加.gitignore文件,用来说明忽略的文件有哪些<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$touch</span> .gitignore</div></pre></td></tr></table></figure></p>
+<p>打开添加需要被忽略的文件</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/git.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一-什么是Git&quot;&gt;&lt;a href=&quot;#一-什么是Git&quot; class=&quot;headerlink&quot; title=&quot;一.什么是Git&quot;&gt;&lt;/a&gt;一.什么是Git&lt;/h2&gt;&lt;p&gt;  Git是目前世界上最先进的分布式版本控制系统。Git没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。&lt;/p&gt;
+&lt;h2 id=&quot;二-版本控制为什么选择Git&quot;&gt;&lt;a href=&quot;#二-版本控制为什么选择Git&quot; class=&quot;headerlink&quot; title=&quot;二.版本控制为什么选择Git&quot;&gt;&lt;/a&gt;二.版本控制为什么选择Git&lt;/h2&gt;&lt;p&gt;1.适合分布式开发，强调个体&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://wxh893466.github.io/tags/Git/"/>
     
   </entry>
   
