@@ -149,11 +149,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                7
+                8
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                6
+                7
                 <span>标签</span>
             </div>
         </div>
@@ -239,8 +239,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);</p>
-<h4 id="Trying-to-open-unclosed-connection"><a href="#Trying-to-open-unclosed-connection" class="headerlink" title="Trying to open unclosed connection."></a>Trying to open unclosed connection.</h4><p> 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次<br></p>
+            <p><h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);<br></p>
             <p class="article-more-link">
                 <a href="/2016/11/14/使用Mongoose遇到的一些错误/#more">查看更多</a>
             </p>
@@ -786,240 +785,9 @@
 
 
 
-    <article id="post-NodeJs的特点" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/08/05/NodeJs的特点/">NodeJs的特点</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/08/05/NodeJs的特点/">
-            <time datetime="2016-08-05T12:11:42.000Z" itemprop="datePublished">2016-08-05</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node/">node</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h3 id="NodeJs的特点"><a href="#NodeJs的特点" class="headerlink" title="NodeJs的特点"></a>NodeJs的特点</h3><blockquote>
-<ul>
-<li>单线程</li>
-<li>非阻塞I/O</li>
-<li>事件驱动</li>
-</ul>
-</blockquote>
-<h3 id="1-单线程"><a href="#1-单线程" class="headerlink" title="1.单线程"></a>1.单线程</h3><p>Node.js是单线程的。什么是线程，线程就是一个程序运行的所有环境的总和，比如内存、必要的CPU等等。<br></p>
-            <p class="article-more-link">
-                <a href="/2016/08/05/NodeJs的特点/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-    <div class="jiathis_style">
-    <span class="jiathis_txt">分享到：</span>
-    <a class="jiathis_button_qzone">QQ空间</a>
-    <a class="jiathis_button_tsina">新浪微博</a>
-    <a class="jiathis_button_tqq">腾讯微博</a>
-    <a class="jiathis_button_weixin">微信</a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-    <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<style>
-    .jiathis_style div:first-child:not(.jiadiv_01) {
-        width: auto !important;
-        border: none !important;
-    }
-    .jiathis_style .jiadiv_01 {
-        margin: 10px 0;
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .jiathis_style .jiadiv_01 div:first-child {
-        display: none;
-    }
-    .jiathis_style .jiadiv_02 {
-        padding: 7px 0 !important;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle {
-        width: 85px;
-        border: none;
-        height: auto;
-        margin: 3px 10px;
-        padding: 6px 10px;
-        border-radius: 4px;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle:hover {
-        border: none;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
-        margin-left: 0;
-    }
-    .jiathis_style .jtico:hover {
-        opacity: 1;
-    }
-    .jiathis_style .ckepopBottom,
-    .jiathis_style .centerBottom {
-        width: auto !important;
-        padding: 5px;
-        background: #f7f7f7;
-    }
-</style>
-
-
-
-</div>
-
-            
-    
-        <a href="https://wxh893466.github.io/2016/08/05/NodeJs的特点/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://wxh893466.github.io/2016/08/05/NodeJs的特点/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Git的使用及常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2015/08/03/Git的使用及常用命令/">Git的使用及常用命令</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2015/08/03/Git的使用及常用命令/">
-            <time datetime="2015-08-03T14:26:02.000Z" itemprop="datePublished">2015-08-03</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Git/">Git</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p><img src="/img/git.png" alt=""></p>
-<h2 id="一-什么是Git"><a href="#一-什么是Git" class="headerlink" title="一.什么是Git"></a>一.什么是Git</h2><p>  Git是目前世界上最先进的分布式版本控制系统。Git没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
-<h2 id="二-版本控制为什么选择Git"><a href="#二-版本控制为什么选择Git" class="headerlink" title="二.版本控制为什么选择Git"></a>二.版本控制为什么选择Git</h2><p>1.适合分布式开发，强调个体<br></p>
-            <p class="article-more-link">
-                <a href="/2015/08/03/Git的使用及常用命令/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-    <div class="jiathis_style">
-    <span class="jiathis_txt">分享到：</span>
-    <a class="jiathis_button_qzone">QQ空间</a>
-    <a class="jiathis_button_tsina">新浪微博</a>
-    <a class="jiathis_button_tqq">腾讯微博</a>
-    <a class="jiathis_button_weixin">微信</a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-    <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<style>
-    .jiathis_style div:first-child:not(.jiadiv_01) {
-        width: auto !important;
-        border: none !important;
-    }
-    .jiathis_style .jiadiv_01 {
-        margin: 10px 0;
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .jiathis_style .jiadiv_01 div:first-child {
-        display: none;
-    }
-    .jiathis_style .jiadiv_02 {
-        padding: 7px 0 !important;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle {
-        width: 85px;
-        border: none;
-        height: auto;
-        margin: 3px 10px;
-        padding: 6px 10px;
-        border-radius: 4px;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle:hover {
-        border: none;
-    }
-    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
-        margin-left: 0;
-    }
-    .jiathis_style .jtico:hover {
-        opacity: 1;
-    }
-    .jiathis_style .ckepopBottom,
-    .jiathis_style .centerBottom {
-        width: auto !important;
-        padding: 5px;
-        background: #f7f7f7;
-    }
-</style>
-
-
-
-</div>
-
-            
-    
-        <a href="https://wxh893466.github.io/2015/08/03/Git的使用及常用命令/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://wxh893466.github.io/2015/08/03/Git的使用及常用命令/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
+    <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+    </nav>
 </section>
             
                 <aside id="sidebar">
@@ -1036,7 +804,7 @@
                             <a href="/2016/11/14/使用Mongoose遇到的一些错误/" class="thumbnail">
     
     
-        <span style="background-image:url(/img/nodejs.jpg)" alt="使用Mongoose遇到的一些错误" class="thumbnail-image"></span>
+        <span style="background-image:url(/img/dashang.jpg)" alt="使用Mongoose遇到的一些错误" class="thumbnail-image"></span>
     
 </a>
 
@@ -1055,7 +823,7 @@
                             <a href="/2016/11/10/Mongoose使用总结/" class="thumbnail">
     
     
-        <span style="background-image:url(/img/nodejs.jpg)" alt="NodeJs中Mongoose使用" class="thumbnail-image"></span>
+        <span style="background-image:url(/img/dashang.jpg)" alt="NodeJs中Mongoose使用" class="thumbnail-image"></span>
     
 </a>
 
@@ -1074,7 +842,7 @@
                             <a href="/2016/08/26/最流行的自动化工具Gulp/" class="thumbnail">
     
     
-        <span style="background-image:url(/img/gulp.jpg)" alt="最流行的自动化工具Gulp" class="thumbnail-image"></span>
+        <span style="background-image:url(/img/dashang.jpg)" alt="最流行的自动化工具Gulp" class="thumbnail-image"></span>
     
 </a>
 
@@ -1093,7 +861,7 @@
                             <a href="/2016/08/25/快速开发框架Expr/" class="thumbnail">
     
     
-        <span style="background-image:url(/img/express.png)" alt="快速开发框架Express" class="thumbnail-image"></span>
+        <span style="background-image:url(/img/dashang.jpg)" alt="快速开发框架Express" class="thumbnail-image"></span>
     
 </a>
 
@@ -1136,7 +904,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1145,7 +913,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongoose/">Mongoose</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">5</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongoose/">Mongoose</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -1154,7 +922,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/MongoDB/" style="font-size: 15px;">MongoDB</a> <a href="/tags/Mongoose/" style="font-size: 15px;">Mongoose</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/node/" style="font-size: 20px;">node</a>
+            <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/MongoDB/" style="font-size: 15px;">MongoDB</a> <a href="/tags/Mongoose/" style="font-size: 15px;">Mongoose</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/node/" style="font-size: 20px;">node</a>
         </div>
     </div>
 

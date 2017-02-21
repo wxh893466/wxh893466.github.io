@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wxh893466.github.io/"/>
-  <updated>2017-02-08T02:40:50.916Z</updated>
+  <updated>2017-02-21T12:15:14.636Z</updated>
   <id>https://wxh893466.github.io/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <link href="https://wxh893466.github.io/2016/11/14/%E4%BD%BF%E7%94%A8Mongoose%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%94%99%E8%AF%AF/"/>
     <id>https://wxh893466.github.io/2016/11/14/使用Mongoose遇到的一些错误/</id>
     <published>2016-11-14T12:01:45.000Z</published>
-    <updated>2017-02-08T02:40:50.916Z</updated>
+    <updated>2017-02-21T12:15:14.636Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);</p>
-<h4 id="Trying-to-open-unclosed-connection"><a href="#Trying-to-open-unclosed-connection" class="headerlink" title="Trying to open unclosed connection."></a>Trying to open unclosed connection.</h4><p> 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次<br> <a id="more"></a><br>var mongoose = require(‘mongoose’);<br>//连接<br>mongoose.connect(‘mongodb://localhost/shuoshuo’);<br>解决方法:链接检测只写一次直接写在app.js 用的时候只有引var mongoose = require(‘mongoose’);不用再链接检测</p>
+    <content type="html"><![CDATA[<h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);<br> <a id="more"></a></p>
+<h4 id="Trying-to-open-unclosed-connection"><a href="#Trying-to-open-unclosed-connection" class="headerlink" title="Trying to open unclosed connection."></a>Trying to open unclosed connection.</h4><p> 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次</p>
+<p>var mongoose = require(‘mongoose’);<br>//连接<br>mongoose.connect(‘mongodb://localhost/shuoshuo’);<br>解决方法:链接检测只写一次直接写在app.js 用的时候只有引var mongoose = require(‘mongoose’);不用再链接检测</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;a href=&quot;#Mongoose使用时碰到的一些错误&quot; class=&quot;headerlink&quot; title=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;/a&gt;Mongoose使用时碰到的一些错误&lt;/h3&gt;&lt;h4 id=&quot;DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot;&gt;&lt;a href=&quot;#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot; class=&quot;headerlink&quot; title=&quot;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&quot;&gt;&lt;/a&gt;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&lt;/h4&gt;&lt;p&gt;解决方法,在连接前加一句话&lt;br&gt;mongoose.Promise = global.Promise;&lt;br&gt;mongoose.connect(‘mongodb://localhost/test’);&lt;/p&gt;
-&lt;h4 id=&quot;Trying-to-open-unclosed-connection&quot;&gt;&lt;a href=&quot;#Trying-to-open-unclosed-connection&quot; class=&quot;headerlink&quot; title=&quot;Trying to open unclosed connection.&quot;&gt;&lt;/a&gt;Trying to open unclosed connection.&lt;/h4&gt;&lt;p&gt; 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次&lt;br&gt;
+      &lt;h3 id=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;a href=&quot;#Mongoose使用时碰到的一些错误&quot; class=&quot;headerlink&quot; title=&quot;Mongoose使用时碰到的一些错误&quot;&gt;&lt;/a&gt;Mongoose使用时碰到的一些错误&lt;/h3&gt;&lt;h4 id=&quot;DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot;&gt;&lt;a href=&quot;#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library&quot; class=&quot;headerlink&quot; title=&quot;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&quot;&gt;&lt;/a&gt;DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)&lt;/h4&gt;&lt;p&gt;解决方法,在连接前加一句话&lt;br&gt;mongoose.Promise = global.Promise;&lt;br&gt;mongoose.connect(‘mongodb://localhost/test’);&lt;br&gt;
     
     </summary>
     
@@ -47,7 +47,7 @@
     <link href="https://wxh893466.github.io/2016/11/10/Mongoose%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
     <id>https://wxh893466.github.io/2016/11/10/Mongoose使用总结/</id>
     <published>2016-11-09T16:10:46.000Z</published>
-    <updated>2017-02-08T02:40:02.532Z</updated>
+    <updated>2017-02-21T12:11:50.756Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Mongoose"><a href="#Mongoose" class="headerlink" title="Mongoose"></a>Mongoose</h2><p>Mongoose能够让我们在NodeJs操作MongoDB数据库变得简单。它实际上是一种ORM(Object Relative Model),其哲学是屏蔽了数据库底层,让我们操作JS对象,这些对象就自动在数据库中持久。<br>官网：<a href="http://www.nodeclass.com/api/mongoose.html" target="_blank" rel="external">http://www.nodeclass.com/api/mongoose.html</a></p>
 <h2 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h2><p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install mongoose</div></pre></td></tr></table></figure></p>
@@ -82,7 +82,7 @@
     <link href="https://wxh893466.github.io/2016/08/26/%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7Gulp/"/>
     <id>https://wxh893466.github.io/2016/08/26/最流行的自动化工具Gulp/</id>
     <published>2016-08-26T06:56:16.000Z</published>
-    <updated>2017-02-08T02:43:34.717Z</updated>
+    <updated>2017-02-21T12:12:28.302Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h1><h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
 <li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
@@ -201,7 +201,7 @@
     <link href="https://wxh893466.github.io/2016/08/25/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6Expr/"/>
     <id>https://wxh893466.github.io/2016/08/25/快速开发框架Expr/</id>
     <published>2016-08-25T13:31:49.000Z</published>
-    <updated>2017-02-08T02:34:45.514Z</updated>
+    <updated>2017-02-21T12:11:36.610Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Express-基于Node-js平台，快速、开放、极简的-web-开发框架"><a href="#Express-基于Node-js平台，快速、开放、极简的-web-开发框架" class="headerlink" title="Express 基于Node.js平台，快速、开放、极简的 web 开发框架"></a>Express 基于Node.js平台，快速、开放、极简的 web 开发框架</h2><p><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express</a> 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。</p>
 <p>和jQuery一样，Express是一个行业标准，大家都要用这个东西。<br>哲学和jQuery也一样，write less do more<br>废话不多说开始</p>
@@ -267,7 +267,7 @@
     <link href="https://wxh893466.github.io/2016/08/05/NodeJs%E7%9A%84%E7%89%B9%E7%82%B9/"/>
     <id>https://wxh893466.github.io/2016/08/05/NodeJs的特点/</id>
     <published>2016-08-05T12:11:42.000Z</published>
-    <updated>2017-02-08T02:43:08.265Z</updated>
+    <updated>2017-02-21T12:11:56.731Z</updated>
     
     <content type="html"><![CDATA[<h3 id="NodeJs的特点"><a href="#NodeJs的特点" class="headerlink" title="NodeJs的特点"></a>NodeJs的特点</h3><blockquote>
 <ul>
@@ -299,6 +299,27 @@
     
     
       <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在全站是https的网站上跨域http网站资源</title>
+    <link href="https://wxh893466.github.io/2015/12/21/%E5%9C%A8%E5%85%A8%E7%AB%99%E6%98%AFhttps%E7%9A%84%E7%BD%91%E7%AB%99%E4%B8%8A%E8%B7%A8%E5%9F%9Fhttp%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/"/>
+    <id>https://wxh893466.github.io/2015/12/21/在全站是https的网站上跨域http网站资源/</id>
+    <published>2015-12-21T11:47:34.000Z</published>
+    <updated>2017-02-21T12:12:21.219Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="最近使用jsonp跨域时遇到一个错误was-loaded-over-HTTPS-but-requested-an-insecure-XMLHttpRequest-endpoint"><a href="#最近使用jsonp跨域时遇到一个错误was-loaded-over-HTTPS-but-requested-an-insecure-XMLHttpRequest-endpoint" class="headerlink" title="最近使用jsonp跨域时遇到一个错误was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint"></a>最近使用jsonp跨域时遇到一个错误was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint</h3><p>这个错误是因为我在一个全站https的域名下,访问http的链接访问不了造成的,解决方法很简单只要把链接的http:去掉就可以了<br>这个方法同样适用,通过CDN服务器来加载第三方js库时</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;最近使用jsonp跨域时遇到一个错误was-loaded-over-HTTPS-but-requested-an-insecure-XMLHttpRequest-endpoint&quot;&gt;&lt;a href=&quot;#最近使用jsonp跨域时遇到一个错误was-loaded-ov
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://wxh893466.github.io/tags/js/"/>
     
   </entry>
   
