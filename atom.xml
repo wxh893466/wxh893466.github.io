@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wxh893466.github.io/"/>
-  <updated>2017-02-21T12:15:14.636Z</updated>
+  <updated>2017-02-25T10:43:04.856Z</updated>
   <id>https://wxh893466.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://wxh893466.github.io/2016/11/14/%E4%BD%BF%E7%94%A8Mongoose%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%94%99%E8%AF%AF/"/>
     <id>https://wxh893466.github.io/2016/11/14/使用Mongoose遇到的一些错误/</id>
     <published>2016-11-14T12:01:45.000Z</published>
-    <updated>2017-02-21T12:15:14.636Z</updated>
+    <updated>2017-02-25T10:43:04.856Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Mongoose使用时碰到的一些错误"><a href="#Mongoose使用时碰到的一些错误" class="headerlink" title="Mongoose使用时碰到的一些错误"></a>Mongoose使用时碰到的一些错误</h3><h4 id="DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library"><a href="#DeprecationWarning-Mongoose-mpromise-mongoose’s-default-promise-library" class="headerlink" title="DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)"></a>DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library)</h4><p>解决方法,在连接前加一句话<br>mongoose.Promise = global.Promise;<br>mongoose.connect(‘mongodb://localhost/test’);<br> <a id="more"></a></p>
 <h4 id="Trying-to-open-unclosed-connection"><a href="#Trying-to-open-unclosed-connection" class="headerlink" title="Trying to open unclosed connection."></a>Trying to open unclosed connection.</h4><p> 这里报错的原因是你多处使用连接的语句,而mongoose只能连接一次</p>
@@ -47,7 +47,7 @@
     <link href="https://wxh893466.github.io/2016/11/10/Mongoose%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
     <id>https://wxh893466.github.io/2016/11/10/Mongoose使用总结/</id>
     <published>2016-11-09T16:10:46.000Z</published>
-    <updated>2017-02-21T12:11:50.756Z</updated>
+    <updated>2017-02-25T10:58:34.711Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Mongoose"><a href="#Mongoose" class="headerlink" title="Mongoose"></a>Mongoose</h2><p>Mongoose能够让我们在NodeJs操作MongoDB数据库变得简单。它实际上是一种ORM(Object Relative Model),其哲学是屏蔽了数据库底层,让我们操作JS对象,这些对象就自动在数据库中持久。<br>官网：<a href="http://www.nodeclass.com/api/mongoose.html" target="_blank" rel="external">http://www.nodeclass.com/api/mongoose.html</a></p>
 <h2 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h2><p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install mongoose</div></pre></td></tr></table></figure></p>
@@ -82,7 +82,7 @@
     <link href="https://wxh893466.github.io/2016/08/26/%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7Gulp/"/>
     <id>https://wxh893466.github.io/2016/08/26/最流行的自动化工具Gulp/</id>
     <published>2016-08-26T06:56:16.000Z</published>
-    <updated>2017-02-21T12:12:28.302Z</updated>
+    <updated>2017-02-25T10:43:58.858Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h1><h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
 <li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
@@ -201,7 +201,7 @@
     <link href="https://wxh893466.github.io/2016/08/25/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6Expr/"/>
     <id>https://wxh893466.github.io/2016/08/25/快速开发框架Expr/</id>
     <published>2016-08-25T13:31:49.000Z</published>
-    <updated>2017-02-21T12:11:36.610Z</updated>
+    <updated>2017-02-25T10:59:07.698Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Express-基于Node-js平台，快速、开放、极简的-web-开发框架"><a href="#Express-基于Node-js平台，快速、开放、极简的-web-开发框架" class="headerlink" title="Express 基于Node.js平台，快速、开放、极简的 web 开发框架"></a>Express 基于Node.js平台，快速、开放、极简的 web 开发框架</h2><p><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express</a> 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。</p>
 <p>和jQuery一样，Express是一个行业标准，大家都要用这个东西。<br>哲学和jQuery也一样，write less do more<br>废话不多说开始</p>
@@ -236,7 +236,7 @@
     <link href="https://wxh893466.github.io/2016/08/18/NodeJs%E6%A8%A1%E5%9D%97%E5%8F%8Anpm%E7%9F%A5%E8%AF%86/"/>
     <id>https://wxh893466.github.io/2016/08/18/NodeJs模块及npm知识/</id>
     <published>2016-08-18T12:14:24.000Z</published>
-    <updated>2017-02-04T14:35:30.774Z</updated>
+    <updated>2017-02-25T10:41:34.537Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/img/dashang.jpg" alt=""></p>
 <h2 id="1-npm"><a href="#1-npm" class="headerlink" title="1.npm"></a>1.npm</h2><p>npm是node的包管理工具,用于下载别人编写的第三方node包,并安装到本地给程序使用,也可以将自己的程序提供到npm服务器上给别人使用</p>
@@ -267,7 +267,7 @@
     <link href="https://wxh893466.github.io/2016/08/05/NodeJs%E7%9A%84%E7%89%B9%E7%82%B9/"/>
     <id>https://wxh893466.github.io/2016/08/05/NodeJs的特点/</id>
     <published>2016-08-05T12:11:42.000Z</published>
-    <updated>2017-02-21T12:11:56.731Z</updated>
+    <updated>2017-02-25T10:41:11.901Z</updated>
     
     <content type="html"><![CDATA[<h3 id="NodeJs的特点"><a href="#NodeJs的特点" class="headerlink" title="NodeJs的特点"></a>NodeJs的特点</h3><blockquote>
 <ul>
@@ -299,6 +299,124 @@
     
     
       <category term="node" scheme="https://wxh893466.github.io/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手机端页面高度等比变化的处理</title>
+    <link href="https://wxh893466.github.io/2016/04/22/%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%A1%B5%E9%9D%A2%E9%AB%98%E5%BA%A6%E7%AD%89%E6%AF%94%E5%8F%98%E5%8C%96%E7%9A%84%E5%A4%84%E7%90%86/"/>
+    <id>https://wxh893466.github.io/2016/04/22/手机端页面高度等比变化的处理/</id>
+    <published>2016-04-22T14:00:06.000Z</published>
+    <updated>2017-02-24T17:04:43.903Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？"><a href="#做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？" class="headerlink" title="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？"></a>做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？</h3><h3 id="1-图片的等比例变化"><a href="#1-图片的等比例变化" class="headerlink" title="1.图片的等比例变化"></a>1.图片的等比例变化</h3><p>图片只设置width。height不设置，高度就是自动等比例变化的。<br><a id="more"></a></p>
+<pre><code class="bash">&lt;div&gt;
+&lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;
+&lt;/div&gt; 
+&lt;div&gt;
+&lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;
+&lt;/div&gt;
+     div{
+            <span class="built_in">float</span>: left;
+            width:50%;
+            border: 1px solid <span class="comment">#000;</span>
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            /*解决留白问题*/
+            display: block;
+        }
+</code></pre>
+<p>这时高度就会等比变化</p>
+<h3 id="2-使用padding-top的小技巧来设置等比变化"><a href="#2-使用padding-top的小技巧来设置等比变化" class="headerlink" title="2.使用padding-top的小技巧来设置等比变化"></a>2.使用padding-top的小技巧来设置等比变化</h3><p>padding-top也是根据父亲的width当参考的</p>
+<pre><code class="bash">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;
+        div{
+            width: 50%;
+            height: 0px;
+            padding-top:26.79%;
+            border: 1px solid <span class="comment">#000;</span>
+            background: url(images/0.jpg);
+            background-size: contain;
+        }
+&lt;/style&gt;
+</code></pre>
+<p>height的参考者是父盒子的height属性，而padding-top参考的是父盒子的width属性。<br>padding-top和width都有相同的参考。</p>
+<h3 id="3-使用js来改变"><a href="#3-使用js来改变" class="headerlink" title="3.使用js来改变"></a>3.使用js来改变</h3><p>通过监听屏幕改变尺寸的时候,计算高度比<br>var boxs=document.querySelectorAll(“.box”);<br>     // 屏幕尺寸被改变<br>     window.onresize=set;<br>     set();<br>     function set(){<br>         // 屏幕的视口宽度<br>         // var windowwidth=document.documentElement.clientWidth;<br>         // 盒子计算后的宽度<br>         var boxwidth=parseInt(getComputedStyle(boxs[0])[“width”]);<br>         boxs[0].style.height=boxwidth/(560/300)+”px”;<br>         boxs[1].style.height=boxwidth/(560/300)+”px”;</p>
+<pre><code>}
+</code></pre><h3 id="4-display-table-cell"><a href="#4-display-table-cell" class="headerlink" title="4.display:table-cell"></a>4.display:table-cell</h3><p>display属性在css3中又新增了一种，叫做table-cell属性。设置这个属性的盒子就具备了像表格td一样的性质：<br>当里面有img的时候会自动的按相同的比例设置每个div的宽度</p>
+<pre><code class="bash">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;
+    section{
+        width: 100%;
+    }
+    div{
+        /*跟表格一样的属性*/
+        /*用于垂直居中*/
+        display: table-cell;
+        border:1px solid <span class="comment">#000;</span>
+    }
+    img{
+        width: 100%;
+    }
+&lt;/style&gt;
+&lt;div&gt;&lt;img src=<span class="string">"images/0.jpg"</span>&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=<span class="string">"images/0.jpg"</span>&gt;&lt;/div&gt;
+</code></pre>
+<p>这时图片就会并排而且,高度也是等比例变化</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？&quot;&gt;&lt;a href=&quot;#做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？&quot; class=&quot;headerlink&quot; title=&quot;做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？&quot;&gt;&lt;/a&gt;做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？&lt;/h3&gt;&lt;h3 id=&quot;1-图片的等比例变化&quot;&gt;&lt;a href=&quot;#1-图片的等比例变化&quot; class=&quot;headerlink&quot; title=&quot;1.图片的等比例变化&quot;&gt;&lt;/a&gt;1.图片的等比例变化&lt;/h3&gt;&lt;p&gt;图片只设置width。height不设置，高度就是自动等比例变化的。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS3" scheme="https://wxh893466.github.io/tags/CSS3/"/>
+    
+      <category term="HTML5" scheme="https://wxh893466.github.io/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态创建DOM添加过渡效果失败的解决方法</title>
+    <link href="https://wxh893466.github.io/2016/03/10/%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BADOM%E6%B7%BB%E5%8A%A0%E8%BF%87%E6%B8%A1%E6%95%88%E6%9E%9C%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://wxh893466.github.io/2016/03/10/动态创建DOM添加过渡效果失败的解决方法/</id>
+    <published>2016-03-10T13:30:44.000Z</published>
+    <updated>2017-02-24T15:47:08.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>当我们动态创建DOM的时候，给DOM添加过度效果时，发现，效果并没有显示出来，这时我们只需要加一个setTimeout函数就可以，我的理解是transition的时候浏览器需要准备时间<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">		div&#123;</div><div class="line">			width: 200px;</div><div class="line">			height: 200px;</div><div class="line">			background-color: blue;</div><div class="line">			transition:all 1s ease 0s;</div><div class="line">		&#125;</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">		$(<span class="string">"&lt;div&gt;&lt;/div&gt;"</span>).appendTo(<span class="string">"body"</span>);</div><div class="line">       </div><div class="line">		<span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">			$(<span class="string">"div"</span>).css(<span class="string">"width"</span>,1000);</div><div class="line">		&#125;,1);</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当我们动态创建DOM的时候，给DOM添加过度效果时，发现，效果并没有显示出来，这时我们只需要加一个setTimeout函数就可以，我的理解是transition的时候浏览器需要准备时间&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr
+    
+    </summary>
+    
+    
+      <category term="CSS3" scheme="https://wxh893466.github.io/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>em,rem的应用</title>
+    <link href="https://wxh893466.github.io/2016/02/25/em-rem%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>https://wxh893466.github.io/2016/02/25/em-rem的应用/</id>
+    <published>2016-02-25T12:06:58.000Z</published>
+    <updated>2017-02-25T10:40:00.497Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="CSS3中em，rem的区别"><a href="#CSS3中em，rem的区别" class="headerlink" title="CSS3中em，rem的区别:"></a>CSS3中em，rem的区别:</h3><h4 id="em为单位的时候设置属性的时候，是相对于父亲元素的font-size属性"><a href="#em为单位的时候设置属性的时候，是相对于父亲元素的font-size属性" class="headerlink" title="em为单位的时候设置属性的时候，是相对于父亲元素的font-size属性"></a>em为单位的时候设置属性的时候，是相对于父亲元素的font-size属性</h4><h4 id="rem是一html的font-size为基准来设置的"><a href="#rem是一html的font-size为基准来设置的" class="headerlink" title="rem是一html的font-size为基准来设置的"></a>rem是一html的font-size为基准来设置的</h4><p>em属性IE6也兼容，没有被开发出来，因为这个属性不好用，是以父亲的字号为基准<br>虽然remIE9才开始兼容，不过我们是用来建手机网站的，这个兼容性可以不考虑，而且它是基于html的字号，html标签中，font-size设置为16px。那么全页面都是以16px当做基准，也就是说1rem=16px,相对于em，rem不相当于父亲，所以统一，不用像媒体查询一样一改到处改,rem在移动端开发过程中带来了很多便利,是未来的趋势</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;CSS3中em，rem的区别&quot;&gt;&lt;a href=&quot;#CSS3中em，rem的区别&quot; class=&quot;headerlink&quot; title=&quot;CSS3中em，rem的区别:&quot;&gt;&lt;/a&gt;CSS3中em，rem的区别:&lt;/h3&gt;&lt;h4 id=&quot;em为单位的时候设置属性的时候
+    
+    </summary>
+    
+    
+      <category term="CSS3" scheme="https://wxh893466.github.io/tags/CSS3/"/>
     
   </entry>
   

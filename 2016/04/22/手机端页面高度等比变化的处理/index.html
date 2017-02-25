@@ -3,14 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2015/12 | Wangxinghong&#39;s Blog</title>
+    <title>手机端页面高度等比变化的处理 | Wangxinghong&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wangxinghong's Blog">
-<meta property="og:url" content="https://wxh893466.github.io/archives/2015/12/index.html">
+    <meta name="description" content="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？1.图片的等比例变化图片只设置width。height不设置，高度就是自动等比例变化的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手机端页面高度等比变化的处理">
+<meta property="og:url" content="https://wxh893466.github.io/2016/04/22/手机端页面高度等比变化的处理/index.html">
 <meta property="og:site_name" content="Wangxinghong's Blog">
+<meta property="og:description" content="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？1.图片的等比例变化图片只设置width。height不设置，高度就是自动等比例变化的。">
+<meta property="og:updated_time" content="2017-02-24T17:04:43.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wangxinghong's Blog">
+<meta name="twitter:title" content="手机端页面高度等比变化的处理">
+<meta name="twitter:description" content="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？1.图片的等比例变化图片只设置width。height不设置，高度就是自动等比例变化的。">
     
 
     
@@ -201,45 +205,203 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2015</h1>
-            </div>
+            <section id="main"><article id="post-手机端页面高度等比变化的处理" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2015/12/21/在全站是https的网站上跨域http网站资源/">在全站是https的网站上跨域http网站资源</a>
+        <h1 class="article-title" itemprop="name">
+            手机端页面高度等比变化的处理
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2015/12/21/在全站是https的网站上跨域http网站资源/">
-            <time datetime="2015-12-21T11:47:34.000Z" itemprop="datePublished">2015-12-21</time>
+        <a href="/2016/04/22/手机端页面高度等比变化的处理/">
+            <time datetime="2016-04-22T14:00:06.000Z" itemprop="datePublished">2016-04-22</time>
         </a>
     </div>
 
 
-                    
-                    
+                        
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/js/">js</a>
+        <a class="tag-link" href="/tags/CSS3/">CSS3</a>, <a class="tag-link" href="/tags/HTML5/">HTML5</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3 id="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？"><a href="#做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？" class="headerlink" title="做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？"></a>做手机页面的时候，盒子可能是宽度是百分比写的，高度是固定的。有些时候，盒子的高度也会等比例变化。这时我们应该如何处理呢？</h3><h3 id="1-图片的等比例变化"><a href="#1-图片的等比例变化" class="headerlink" title="1.图片的等比例变化"></a>1.图片的等比例变化</h3><p>图片只设置width。height不设置，高度就是自动等比例变化的。<br><a id="more"></a></p>
+<pre><code class="bash">&lt;div&gt;
+&lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;
+&lt;/div&gt; 
+&lt;div&gt;
+&lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;
+&lt;/div&gt;
+     div{
+            <span class="built_in">float</span>: left;
+            width:50%;
+            border: 1px solid <span class="comment">#000;</span>
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            /*解决留白问题*/
+            display: block;
+        }
+</code></pre>
+<p>这时高度就会等比变化</p>
+<h3 id="2-使用padding-top的小技巧来设置等比变化"><a href="#2-使用padding-top的小技巧来设置等比变化" class="headerlink" title="2.使用padding-top的小技巧来设置等比变化"></a>2.使用padding-top的小技巧来设置等比变化</h3><p>padding-top也是根据父亲的width当参考的</p>
+<pre><code class="bash">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;
+        div{
+            width: 50%;
+            height: 0px;
+            padding-top:26.79%;
+            border: 1px solid <span class="comment">#000;</span>
+            background: url(images/0.jpg);
+            background-size: contain;
+        }
+&lt;/style&gt;
+</code></pre>
+<p>height的参考者是父盒子的height属性，而padding-top参考的是父盒子的width属性。<br>padding-top和width都有相同的参考。</p>
+<h3 id="3-使用js来改变"><a href="#3-使用js来改变" class="headerlink" title="3.使用js来改变"></a>3.使用js来改变</h3><p>通过监听屏幕改变尺寸的时候,计算高度比<br>var boxs=document.querySelectorAll(“.box”);<br>     // 屏幕尺寸被改变<br>     window.onresize=set;<br>     set();<br>     function set(){<br>         // 屏幕的视口宽度<br>         // var windowwidth=document.documentElement.clientWidth;<br>         // 盒子计算后的宽度<br>         var boxwidth=parseInt(getComputedStyle(boxs[0])[“width”]);<br>         boxs[0].style.height=boxwidth/(560/300)+”px”;<br>         boxs[1].style.height=boxwidth/(560/300)+”px”;</p>
+<pre><code>}
+</code></pre><h3 id="4-display-table-cell"><a href="#4-display-table-cell" class="headerlink" title="4.display:table-cell"></a>4.display:table-cell</h3><p>display属性在css3中又新增了一种，叫做table-cell属性。设置这个属性的盒子就具备了像表格td一样的性质：<br>当里面有img的时候会自动的按相同的比例设置每个div的宽度</p>
+<pre><code class="bash">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;
+    section{
+        width: 100%;
+    }
+    div{
+        /*跟表格一样的属性*/
+        /*用于垂直居中*/
+        display: table-cell;
+        border:1px solid <span class="comment">#000;</span>
+    }
+    img{
+        width: 100%;
+    }
+&lt;/style&gt;
+&lt;div&gt;&lt;img src=<span class="string">"images/0.jpg"</span>&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=<span class="string">"images/0.jpg"</span>&gt;&lt;/div&gt;
+</code></pre>
+<p>这时图片就会并排而且,高度也是等比例变化</p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+    <div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_qzone">QQ空间</a>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_tqq">腾讯微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+    <a class="jiathis_counter_style"></a>
 </div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<style>
+    .jiathis_style div:first-child:not(.jiadiv_01) {
+        width: auto !important;
+        border: none !important;
+    }
+    .jiathis_style .jiadiv_01 {
+        margin: 10px 0;
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .jiathis_style .jiadiv_01 div:first-child {
+        display: none;
+    }
+    .jiathis_style .jiadiv_02 {
+        padding: 7px 0 !important;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle {
+        width: 85px;
+        border: none;
+        height: auto;
+        margin: 3px 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:hover {
+        border: none;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
+        margin-left: 0;
+    }
+    .jiathis_style .jtico:hover {
+        opacity: 1;
+    }
+    .jiathis_style .ckepopBottom,
+    .jiathis_style .centerBottom {
+        width: auto !important;
+        padding: 5px;
+        background: #f7f7f7;
+    }
+</style>
+
+
+
+</div>
+
+            
+    
+        <a href="https://wxh893466.github.io/2016/04/22/手机端页面高度等比变化的处理/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://wxh893466.github.io/2016/04/22/手机端页面高度等比变化的处理/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/05/NodeJs的特点/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    NodeJs的特点
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/03/10/动态创建DOM添加过渡效果失败的解决方法/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">动态创建DOM添加过渡效果失败的解决方法</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -412,11 +574,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'https://wxh893466.github.io/2016/04/22/手机端页面高度等比变化的处理/';
+        
+        this.page.identifier = '手机端页面高度等比变化的处理';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
