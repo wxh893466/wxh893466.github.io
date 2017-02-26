@@ -78,6 +78,37 @@
   </entry>
   
   <entry>
+    <title>为什么要用webpack</title>
+    <link href="https://wxh893466.github.io/2016/10/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8webpack/"/>
+    <id>https://wxh893466.github.io/2016/10/28/为什么要用webpack/</id>
+    <published>2016-10-28T14:42:51.000Z</published>
+    <updated>2017-02-26T16:29:32.505Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="what’s-is-webpack"><a href="#what’s-is-webpack" class="headerlink" title="what’s is webpack"></a>what’s is webpack</h2><p>Webpack 是一个模块打包器。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。<br>确确的说WebPack是一种模块化的解决方案</p>
+<a id="more"></a>
+<h2 id="why-is-webpack？"><a href="#why-is-webpack？" class="headerlink" title="why is webpack？"></a>why is webpack？</h2><blockquote>
+<ul>
+<li>模块化：解决模块的定义、依赖和导出等问题</li>
+<li>比gulp,Grunt更强大</li>
+<li>代码拆分,loader，智能解析，快速运行等特点</li>
+</ul>
+</blockquote>
+<h3 id="兼容整合能力强"><a href="#兼容整合能力强" class="headerlink" title="兼容整合能力强"></a>兼容整合能力强</h3><p>使用Loder装换器可以将各种资源转换为JavaScript 模块；Webpack 有一个智能解析器，几乎可以处理任何第三方库，无论它们的模块形式是 CommonJS、 AMD 还是普通的 JS 文件。甚至在加载依赖的时候，允许使用动态表达式 require(“./templates/“ + name + “.jade”)。</p>
+<h2 id="使用方法参照：官方文档和下面几篇文章"><a href="#使用方法参照：官方文档和下面几篇文章" class="headerlink" title="使用方法参照：官方文档和下面几篇文章"></a>使用方法参照：官方文档和下面几篇文章</h2><h3 id="什么是WebPack，为什么要使用它？"><a href="#什么是WebPack，为什么要使用它？" class="headerlink" title="什么是WebPack，为什么要使用它？"></a><a href="http://www.cnblogs.com/-walker/p/6056529.html" target="_blank" rel="external">什么是WebPack，为什么要使用它？</a></h3><h3 id="使用webpack2-0-搭建前端项目"><a href="#使用webpack2-0-搭建前端项目" class="headerlink" title="使用webpack2.0 搭建前端项目"></a><a href="http://www.cnblogs.com/doudoujun/p/6405534.html" target="_blank" rel="external">使用webpack2.0 搭建前端项目</a></h3><h3 id="入门Webpack，看这篇就够了"><a href="#入门Webpack，看这篇就够了" class="headerlink" title="入门Webpack，看这篇就够了"></a><a href="http://blog.csdn.net/kun5706947/article/details/52596766" target="_blank" rel="external">入门Webpack，看这篇就够了</a></h3><p>我自己写了个demo，欢迎fork (<a href="https://github.com/wxh893466/webpack-demo" target="_blank" rel="external">https://github.com/wxh893466/webpack-demo</a>)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;what’s-is-webpack&quot;&gt;&lt;a href=&quot;#what’s-is-webpack&quot; class=&quot;headerlink&quot; title=&quot;what’s is webpack&quot;&gt;&lt;/a&gt;what’s is webpack&lt;/h2&gt;&lt;p&gt;Webpack 是一个模块打包器。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。&lt;br&gt;确确的说WebPack是一种模块化的解决方案&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="https://wxh893466.github.io/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>最流行的自动化工具Gulp</title>
     <link href="https://wxh893466.github.io/2016/08/26/%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7Gulp/"/>
     <id>https://wxh893466.github.io/2016/08/26/最流行的自动化工具Gulp/</id>
