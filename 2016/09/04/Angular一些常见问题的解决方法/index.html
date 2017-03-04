@@ -3,14 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签: expressjs | Wangxinghong&#39;s Blog</title>
+    <title>Angular一些常见问题的解决方法 | Wangxinghong&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wangxinghong's Blog">
-<meta property="og:url" content="https://wxh893466.github.io/tags/expressjs/index.html">
+    <meta name="description" content="Angular一些常见问题的解决方法1.重复字段不能绑定 报错Error: [ngRepeat:dupes]当我们的数据有重复字段时，绑定就会出问题，比如下面的代码data中有两个“小红”解决办法在后面加track by $(一个不会重复的字段)，一般是track by $index">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular一些常见问题的解决方法">
+<meta property="og:url" content="https://wxh893466.github.io/2016/09/04/Angular一些常见问题的解决方法/index.html">
 <meta property="og:site_name" content="Wangxinghong's Blog">
+<meta property="og:description" content="Angular一些常见问题的解决方法1.重复字段不能绑定 报错Error: [ngRepeat:dupes]当我们的数据有重复字段时，绑定就会出问题，比如下面的代码data中有两个“小红”解决办法在后面加track by $(一个不会重复的字段)，一般是track by $index">
+<meta property="og:image" content="https://wxh893466.github.io/img/mogu_08.jpg">
+<meta property="og:updated_time" content="2017-03-04T16:27:40.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wangxinghong's Blog">
+<meta name="twitter:title" content="Angular一些常见问题的解决方法">
+<meta name="twitter:description" content="Angular一些常见问题的解决方法1.重复字段不能绑定 报错Error: [ngRepeat:dupes]当我们的数据有重复字段时，绑定就会出问题，比如下面的代码data中有两个“小红”解决办法在后面加track by $(一个不会重复的字段)，一般是track by $index">
+<meta name="twitter:image" content="https://wxh893466.github.io/img/mogu_08.jpg">
     
 
     
@@ -201,45 +207,151 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#expressjs</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-Angular一些常见问题的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/08/25/快速开发框架Expr/">快速开发框架Express</a>
+        <h1 class="article-title" itemprop="name">
+            Angular一些常见问题的解决方法
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/08/25/快速开发框架Expr/">
-            <time datetime="2016-08-25T13:31:49.000Z" itemprop="datePublished">2016-08-25</time>
+        <a href="/2016/09/04/Angular一些常见问题的解决方法/">
+            <time datetime="2016-09-04T13:42:39.000Z" itemprop="datePublished">2016-09-04</time>
         </a>
     </div>
 
 
-                    
-                    
+                        
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/expressjs/">expressjs</a>, <a class="tag-link" href="/tags/node/">node</a>
+        <a class="tag-link" href="/tags/Angular/">Angular</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3 id="Angular一些常见问题的解决方法"><a href="#Angular一些常见问题的解决方法" class="headerlink" title="Angular一些常见问题的解决方法"></a>Angular一些常见问题的解决方法</h3><h4 id="1-重复字段不能绑定-报错Error-ngRepeat-dupes"><a href="#1-重复字段不能绑定-报错Error-ngRepeat-dupes" class="headerlink" title="1.重复字段不能绑定 报错Error: [ngRepeat:dupes]"></a>1.重复字段不能绑定 报错Error: [ngRepeat:dupes]</h4><p>当我们的数据有重复字段时，绑定就会出问题，比如下面的代码data中有两个“小红”<br>解决办法在后面加track by $(一个不会重复的字段)，一般是track by $index<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">        .red&#123;</div><div class="line">            color: darkred;</div><div class="line">        &#125;</div><div class="line">        .blue&#123;</div><div class="line">            color: olivedrab;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body ng-app=<span class="string">'myApp'</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> placeholder=<span class="string">"输入开头名字变红"</span> ng-model=<span class="string">"lastname"</span>/&gt;</div><div class="line">&lt;ul ng-controller=<span class="string">"ListController"</span>&gt;</div><div class="line">    &lt;!--&lt;li ng-repeat=<span class="string">"item in data"</span> ng-class=<span class="string">"&#123;red:item.startsWith(lastname)&#125;"</span>&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;--&gt;</div><div class="line">   &lt;!-- 解决重复时值放不进去track by $不重复的属性--&gt;</div><div class="line">    &lt;li ng-repeat=<span class="string">"item in data track by <span class="variable">$index</span>"</span> ng-class=<span class="string">"&#123;red:item.startsWith(lastname)&#125;"</span>&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;</div><div class="line"></div><div class="line">&lt;/ul&gt;</div><div class="line"></div><div class="line">&lt;script src=<span class="string">"bower_components/angular/angular.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    angular.module(<span class="string">'myApp'</span>, [])</div><div class="line">            .controller(<span class="string">'ListController'</span>, [<span class="string">'$scope'</span>, <span class="keyword">function</span> (<span class="variable">$scope</span>) &#123;</div><div class="line">                <span class="variable">$scope</span>.data = [<span class="string">"小红"</span>, <span class="string">"xiao还"</span>, <span class="string">"小狗"</span>, <span class="string">"小红"</span>,<span class="string">"xiao两"</span>];</div><div class="line">            &#125;]);</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="2-数据绑定页面闪烁的问题"><a href="#2-数据绑定页面闪烁的问题" class="headerlink" title="2.数据绑定页面闪烁的问题"></a>2.数据绑定页面闪烁的问题</h4><p>我们在绑定数据的时候,会先看到两个大括号，说明angular还没执行，<br>这个问题的解决办法：元素少的的用ng-bind=””，并且在模块上加ng-cloak，不过这样还是有点闪烁，<br>官方推荐直接把样式放在head里<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">        @charset <span class="string">"UTF-8"</span>;</div><div class="line">        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) &#123;</div><div class="line">            display: none !important;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        ng\:form &#123;</div><div class="line">            display: block;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        .ng-animate-shim &#123;</div><div class="line">            visibility: hidden;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        .ng-anchor &#123;</div><div class="line">            position: absolute;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">    &lt;body ng-app ng-cloak&gt;</div><div class="line">    &lt;span&gt;&#123;&#123;<span class="string">"hello"</span>&#125;&#125;&lt;/span&gt;</div><div class="line">    &lt;script src=<span class="string">"bower_components/angular/angular.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div></pre></td></tr></table></figure></p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+    <div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_qzone">QQ空间</a>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_tqq">腾讯微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+    <a class="jiathis_counter_style"></a>
 </div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<style>
+    .jiathis_style div:first-child:not(.jiadiv_01) {
+        width: auto !important;
+        border: none !important;
+    }
+    .jiathis_style .jiadiv_01 {
+        margin: 10px 0;
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .jiathis_style .jiadiv_01 div:first-child {
+        display: none;
+    }
+    .jiathis_style .jiadiv_02 {
+        padding: 7px 0 !important;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle {
+        width: 85px;
+        border: none;
+        height: auto;
+        margin: 3px 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:hover {
+        border: none;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
+        margin-left: 0;
+    }
+    .jiathis_style .jtico:hover {
+        opacity: 1;
+    }
+    .jiathis_style .ckepopBottom,
+    .jiathis_style .centerBottom {
+        width: auto !important;
+        padding: 5px;
+        background: #f7f7f7;
+    }
+</style>
+
+
+
+</div>
+
+            
+    
+        <a href="https://wxh893466.github.io/2016/09/04/Angular一些常见问题的解决方法/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://wxh893466.github.io/2016/09/04/Angular一些常见问题的解决方法/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/10/28/为什么要用webpack/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    为什么要用webpack
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/26/最流行的自动化工具Gulp/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">最流行的自动化工具Gulp</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -412,11 +524,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'https://wxh893466.github.io/2016/09/04/Angular一些常见问题的解决方法/';
+        
+        this.page.identifier = 'Angular一些常见问题的解决方法';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
